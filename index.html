@@ -6,6 +6,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="theme-color" content="#ed1c24">
 <title>CODECORSA | Tienda móvil</title>
+.splash{
+  position:absolute;
+  inset:0;
+  z-index:30;
+  min-height:100dvh;
+  overflow:hidden;
+  background:#d9d0c5;
+}
+.splash-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.splash-shade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.52) 0%,
+    transparent 28%,
+    transparent 45%,
+    rgba(0,0,0,.10) 66%,
+    rgba(0,0,0,.48) 100%
+  );
+}
+.splash-logo{
+  position:absolute;
+  z-index:2;
+  top:10%;
+  left:8%;
+  width:84%;
+  text-align:center;
+}
+.splash-logo img{
+  width:100%;
+  max-width:280px;
+  max-height:90px;
+  object-fit:contain;
+}
+#splashBrand strong{
+  display:block;
+  color:#ed1c24;
+  font-size:32px;
+  font-weight:500;
+}
+#splashBrand small{
+  display:block;
+  color:#171717;
+  font-size:9px;
+  letter-spacing:1px;
+}
+.splash-message{
+  position:absolute;
+  z-index:2;
+  left:9%;
+  bottom:19%;
+  color:#171717;
+}
+.splash-message h1{
+  font-size:clamp(32px,9vw,43px);
+  line-height:1.08;
+  letter-spacing:-1.3px;
+  margin:0;
+}
+.splash-message h1 span{color:#ed1c24}
+.splash-message p{
+  font-size:12px;
+  color:white;
+  text-shadow:0 1px 5px #333;
+}
+.splash-next{
+  position:absolute;
+  z-index:3;
+  right:9%;
+  bottom:7%;
+  width:53px;
+  height:53px;
+  border:0;
+  border-radius:50%;
+  background:#ed1c24;
+  color:white;
+  font-size:26px;
+  box-shadow:0 4px 15px #0003;
+}
+.splash-indicator{
+  position:absolute;
+  bottom:9%;
+  left:10%;
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.splash-indicator span{
+  width:30px;
+  height:4px;
+  border-radius:5px;
+  background:#ed1c24;
+}
+.splash-indicator i{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#ffffffb8;
+}
+.splash.hide{display:none}
 <style>
 :root{--red:#ed1c24;--black:#171717;--gray:#777;--line:#eee;--bg:#fafafa;--green:#12ad55}
 *{box-sizing:border-box}
@@ -117,6 +225,38 @@ select{width:100%;padding:12px;border:1px solid #ddd;border-radius:9px;backgroun
 </head>
 <body>
 <div class="app">
+
+<div class="splash" id="splash">
+  <img
+    class="splash-photo"
+    src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=90"
+    alt="Sala elegante con cortinas"
+  >
+
+  <div class="splash-shade"></div>
+
+  <div class="splash-logo">
+    <img src="logo-codecorsa.png"
+         alt="CODECORSA"
+         onerror="this.style.display='none';document.getElementById('splashBrand').style.display='block'">
+    <div id="splashBrand" style="display:none">
+      <strong>Codecorsa</strong>
+      <small>CORTINAS · ROLLER · ALFOMBRAS</small>
+    </div>
+  </div>
+
+  <div class="splash-message">
+    <h1>Espacios<br>que <span>inspiran</span></h1>
+    <p>Cortinas y decoración para tu hogar.</p>
+  </div>
+
+  <button class="splash-next" id="enterApp"
+          aria-label="Entrar a CODECORSA">➜</button>
+
+  <div class="splash-indicator">
+    <span></span><i></i><i></i><i></i>
+  </div>
+</div>
 <header>
  <div class="topbar">
   <button class="iconbtn" id="menuButton" aria-label="Abrir menú">☰</button>
