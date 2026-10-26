@@ -500,5 +500,13 @@ $("menuButton").onclick=()=>go("more");
 document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go)));
 renderHome();renderCatalog();renderBadge();renderStores();renderCart();
 </script>
+
+<script>
+document.getElementById("enterApp").addEventListener("click", function () {
+  document.getElementById("splash").classList.add("hide");
+  window.scrollTo(0, 0);
+});
+</script>
+
 </body>
 </html>
