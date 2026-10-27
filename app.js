@@ -56,30 +56,26 @@ document.getElementById("moreBtn")
   .addEventListener("click", () => dialog.showModal());
 
 // Compartir CODECORSA
-document.getElementById("shareBtn").addEventListener("click", async () => {
-  const shareData = {
-    title: "CODECORSA",
-    text: "Viste tus espacios con estilo. Conoce CODECORSA.",
-    url: "https://codecorsa.github.io/app/"
-  };
 
-  if (navigator.share) {
-    try {
-      await navigator.share(shareData);
-    } catch (error) {
-      // El usuario pudo cancelar el menú de compartir.
-    }
-  } else if (navigator.clipboard) {
-    try {
-      await navigator.clipboard.writeText(shareData.url);
-      showToast("¡Enlace copiado para compartir!");
-    } catch (error) {
-      showToast(shareData.url);
-    }
-  } else {
-    showToast(shareData.url);
+/* Abrir la ventana del código QR */
+const qrDialog = document.getElementById("qrDialog");
+
+document.getElementById("shareBtn").addEventListener("click", () => {
+  qrDialog.showModal();
+});
+
+/* Cerrar con la X */
+document.getElementById("closeQrDialog").addEventListener("click", () => {
+  qrDialog.close();
+});
+
+/* Cerrar al tocar fuera de la ventana */
+qrDialog.addEventListener("click", (event) => {
+  if (event.target === qrDialog) {
+    qrDialog.close();
   }
 });
+
 
 // Registrar el service worker.
 if ("serviceWorker" in navigator && location.protocol === "https:") {
