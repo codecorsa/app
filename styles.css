@@ -68,6 +68,74 @@
   .category img {
     height: 105px;
   }
+  
+/* Beneficios: iconos circulares CODECORSA */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 18px 10px;
+  background: #fff;
+  align-items: start;
+}
+
+.benefits .benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  padding: 0 2px;
+  border: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.15;
+}
+
+.benefits .benefit-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.benefits .benefit-icon.red {
+  background: #ed101b;
+}
+
+.benefits .benefit-icon.black {
+  background: #050505;
+}
+
+.benefits .benefit-icon svg {
+  display: block;
+  width: 34px;
+  height: 34px;
+  color: #fff;
+}
+
+@media (max-width: 370px) {
+  .benefits {
+    gap: 4px;
+    padding-inline: 6px;
+  }
+
+  .benefits .benefit {
+    font-size: 10px;
+  }
+
+  .benefits .benefit-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+  }
+}
+
 
   .categories-title {
     font-size: 28px;
