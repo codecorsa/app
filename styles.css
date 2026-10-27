@@ -287,4 +287,83 @@
   color: #ffffff !important;
 }
 
+/* Ventana del código QR CODECORSA */
+.qr-modal {
+  border: 2px solid #ed101b;
+  border-radius: 26px;
+  padding: 30px 22px 24px;
+  text-align: center;
+  background: #fff;
+  width: min(90vw, 430px);
+  max-width: 100%;
+}
+
+.qr-modal::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.qr-modal h2 {
+  color: #ed101b;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  margin: 8px 30px 14px;
+}
+
+.qr-modal p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 auto 18px;
+}
+
+.qr-frame {
+  width: min(100%, 300px);
+  aspect-ratio: 1;
+  margin: 0 auto 16px;
+  padding: 10px;
+  border: 4px solid #ed101b;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(237, 16, 27, 0.15);
+}
+
+.qr-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-modal .qr-caption {
+  color: #222;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.qr-modal .close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #f2c3c6;
+  border-radius: 50%;
+  background: #fff1f1;
+  color: #333;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 370px) {
+  .qr-modal {
+    padding: 28px 16px 20px;
+  }
+
+  .qr-frame {
+    padding: 7px;
+  }
+}
+
 
