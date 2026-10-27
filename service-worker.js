@@ -1,14 +1,13 @@
 
-const CACHE_NAME = "codecorsa-app-v2";
-
+const CACHE_NAME = "codecorsa-app-v3";
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./manifest.webmanifest",
-  "./icon-192.png",
-  "./icon-512.png",
+  "./codecorsa-icon-192.png",
+"./codecorsa-icon-512.png",
   "./logo-codecorsa.jpg",
   "./cabecera-codecorsa.png",
   "./hero-living.jpg",
