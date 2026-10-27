@@ -240,3 +240,13 @@
     height: 26px;
   }
 }
+
+/* Ocultar la barra de navegación inferior */
+.bottom-nav {
+  display: none !important;
+}
+
+/* Eliminar el espacio reservado para la barra */
+.app-shell {
+  padding-bottom: 0 !important;
+}
