@@ -166,3 +166,77 @@
 .hero {
   display: none;
 }
+
+/* CORRECCIÓN: iconos de beneficios en celulares */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  padding: 18px 8px;
+  background: #fff;
+  align-items: start;
+}
+
+.benefits .benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding: 0 2px;
+  border: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.benefits .benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.benefits .benefit-icon.red {
+  background: #ed101b;
+}
+
+.benefits .benefit-icon.black {
+  background: #050505;
+}
+
+.benefits .benefit-icon svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+@media (max-width: 370px) {
+  .benefits {
+    gap: 3px;
+    padding-inline: 5px;
+  }
+
+  .benefits .benefit {
+    font-size: 10px;
+  }
+
+  .benefits .benefit-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .benefits .benefit-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+}
