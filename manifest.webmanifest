@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Codecorsa | Cortinas, Roller y Alfombras",
+  "short_name": "Codecorsa",
+  "description": "Diseño para tu hogar: cortinas, roller, alfombras y más.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ed101b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
