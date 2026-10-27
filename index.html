@@ -199,23 +199,46 @@
     </nav>
   </div>
 
-  <!-- Ambas ventanas deben estar separadas -->
+  
+<!-- Ventana Cómo instalar -->
 <dialog id="installDialog" class="modal">
-  <!-- Contenido de instalación -->
+  <button class="close" id="closeDialog"
+          aria-label="Cerrar">×</button>
+
+  <h2>Acceso directo<br>en tu móvil</h2>
+
+  <p>¡Ten nuestros datos siempre a mano!
+    Sigue estos pasos:</p>
+
+  <h3>Para iPhone (Safari)</h3>
+  <ol>
+    <li>Toca el icono de <b>Compartir</b> del navegador.</li>
+    <li>Busca y selecciona <b>“Agregar a inicio”</b>.</li>
+  </ol>
+
+  <hr>
+
+  <h3>Para Android (Chrome)</h3>
+  <ol>
+    <li>Toca el menú de <b>tres puntos</b>.</li>
+    <li>Elige <b>“Instalar aplicación”</b> o
+      <b>“Añadir a pantalla de inicio”</b>.</li>
+  </ol>
+
+  <button class="primary-btn modal-ok" id="okDialog">
+    Entendido
+  </button>
 </dialog>
 
+<!-- Ventana independiente del código QR -->
 <dialog id="qrDialog" class="modal qr-modal">
-  <!-- Contenido del código QR -->
-</dialog>
   <button class="close" id="closeQrDialog"
-          aria-label="Cerrar">×</button>
+          aria-label="Cerrar ventana del QR">×</button>
 
   <h2>Código QR</h2>
 
-  <p>
-    Escanea el código para abrir CODECORSA
-    en tu dispositivo.
-  </p>
+  <p>Escanea el código para abrir CODECORSA
+    en tu dispositivo.</p>
 
   <div class="qr-frame">
     <img src="./qr-app.png"
@@ -226,15 +249,7 @@
     CODECORSA · Cortinas, roller y alfombras
   </p>
 </dialog>
-    <h2>Acceso directo<br>en tu móvil</h2>
-    <p>¡Ten nuestros datos siempre a mano! Sigue estos pasos:</p>
-    <h3>Para iPhone (Safari)</h3>
-    <ol><li>Toca el icono de <b>Compartir</b> del navegador.</li><li>Busca y selecciona <b>“Agregar a inicio”</b>.</li></ol>
-    <hr>
-    <h3>Para Android (Chrome)</h3>
-    <ol><li>Toca el menú de <b>tres puntos</b>.</li><li>Elige <b>“Instalar aplicación”</b> o <b>“Añadir a pantalla de inicio”</b>.</li></ol>
-    <button class="primary-btn modal-ok" id="okDialog">Entendido</button>
-  </dialog>
+
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="./app.js"></script>
 </body>
