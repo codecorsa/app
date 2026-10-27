@@ -251,4 +251,40 @@
   padding-bottom: 0 !important;
 }
 
+/* MÁS ESPACIO EN LA PARTE INFERIOR */
+.app-shell {
+  padding-bottom: 28px !important;
+}
+
+.social-section {
+  padding-bottom: 24px;
+}
+
+/* BOTONES VER MAPA: FONDO NEGRO Y ELEMENTOS BLANCOS */
+.store a {
+  background: #050505 !important;
+  color: #ffffff !important;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+/* Texto del botón */
+.store a,
+.store a b {
+  color: #ffffff !important;
+}
+
+/* Flecha blanca */
+.store a b {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* Efecto al pulsar */
+.store a:hover,
+.store a:active {
+  background: #ed101b !important;
+  color: #ffffff !important;
+}
+
 
