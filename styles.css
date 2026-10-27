@@ -366,4 +366,33 @@
   }
 }
 
+/* Pie de página CODECORSA */
+.site-footer {
+  margin-top: 24px;
+  padding: 18px 0 12px;
+  background: #fff;
+  border-top: 2px solid #ed101b;
+}
+
+.site-footer .quick-actions {
+  padding: 12px 14px;
+}
+
+.site-footer > p {
+  margin: 12px 8px 4px;
+  text-align: center;
+  color: #666;
+  font-size: 11px;
+}
+
+.site-footer .share-card {
+  background: #ed101b;
+  color: #fff;
+}
+
+.site-footer .install-card {
+  background: #fff1f1;
+  color: #171717;
+}
+
 
